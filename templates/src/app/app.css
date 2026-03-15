@@ -1,0 +1,15 @@
+.fColor {
+  color: red;
+}
+
+.fSize {
+  font-size: larger;
+}
+
+.fFamily {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.f2Color {
+  color: blue;
+}

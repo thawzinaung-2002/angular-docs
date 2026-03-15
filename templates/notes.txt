@@ -1,0 +1,24 @@
+Template
+
+- In Angular, template is template in @Componenent Decorator or .html file
+- Angular compiles templates into JavaScript in order to build up an internal understanding of your application.
+- HTML syntax is valid but <script> tag not support
+- Binding data 
+- Binding Events
+- Control Flow
+- Pipes
+- Control how components render content
+- Template Fragment
+- Group multiple elements
+- Variables
+- @dfer
+- Expression syntax
+- Whiltespaces
+
+1. Data Binding
+2. Event Binding
+3. Two Way Data Binding
+4. Control Flow
+5. Pipes
+6. Ng Content - in Componenents Folder
+7. ng template

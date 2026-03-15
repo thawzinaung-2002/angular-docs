@@ -1,0 +1,6 @@
+[()] - Banana in a box
+
+- imports FormsModule ,use ngModel directive and assign it the state that you want to update
+- child component must contain a model property
+- parent component must wrap the model property name in two way data-binding syntax
+- assign property or signal to the model property

@@ -1,0 +1,13 @@
+Event Binding - ()
+
+- event bindiging inside parenthesis eg. (keyup)
+- can access object with $event in parenthesis eg. (keyup)=update($event)
+- Angular lets you filter the events by specifying a specific key using the period (.) character.eg. (keyup.shift.enter)
+- Angular supports the modifiers alt, control, meta, and shift.
+- When pressing keyboard, browser generates key(logical) and code(physical).
+- key eg. keydown.alt.shiftleft
+- code eg. keydown.code.alt.shiftleft
+- In MacOS, Alt+S => dobuble S problem
+- code suffix is solution. 
+- support custom event creating with EVENT_MANAGER_PLUGINS token
+

@@ -1,0 +1,9 @@
+<p>template-fragment works!</p>
+
+<ng-template #myFragment>
+  <div>
+    <p>This is text inside ng-template. Count is {{ count }}</p>
+  </div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="myFragment"></ng-container>

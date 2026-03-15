@@ -1,0 +1,17 @@
+<!-- <p [class]="cssClassArr()">Color is {{ theme | strConcat: 'thaw zin aung' }}</p>
+
+<button type="button" (click)="changeColor()">Change Color</button>
+
+<a href="#overlay" (click)="showOverlay($event)">Click</a> -->
+
+<!-- <base-button>
+  <h1>Hello This is from parent</h1>
+</base-button> -->
+
+<!-- <template-fragment></template-fragment> -->
+
+<ng-template #myFragment let-passing="parameter">
+  <p>This is ng-template in App.html {{ passing }}</p>
+</ng-template>
+
+<fragment-ref [templateRef]="myFragment"></fragment-ref>

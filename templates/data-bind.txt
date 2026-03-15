@@ -1,0 +1,36 @@
+In Angular, a binding creates a dynamic connection between a component's template and its data.
+
+{{}} -> String Interpolation
+All values are converted to string. Objects and arrays are converted value's using toString method
+
+signal -  Angular tracks the signals read in the template, and updates the rendered page when those signal values change.
+normal Vs signal?
+checks everything using zone.js Vs checks only the value with subscriber
+
+dynamic bind - [] or {{}}
+- support HTML elements' DOM instance, a component or directive instance, native elements
+- native : <button [disabled]="myVar"></button> ,<button disabled="{{myVar}}"></button>
+- component : <my-custom [value]="myVar" />
+- directive : <img [ngSrc]="myVar" />
+
+Attribute binding - prefix attr like "attr"
+- attributes : <ul [attr.role]="myVar"> **If the value of an attribute binding is null, Angular removes the attribute by calling removeAttribute.
+
+- css class : <ul [class.expanded]="isExpanded()">
+
+Css Class binding support 3 ways 
+- A string containing one or more CSS classes separated by spaces eg. "layout btn-color"
+- An array of CSS class strings eg. ["layout", "btn-color"]
+- An object where each property name is a CSS class name and each corresponding value determines whether that class is applied to the element, based on truthiness. eg. {"layout", "btn-color"}
+
+- Angular intelligently combines all of CSS class in the rendered result
+- If an element has multiple bindings for the same CSS class, Angular resolves collisions by following its style precedence order.
+- [class] doesn't support space separated multiple classes in a single key eg. [class] = {"layout btn-color": true}
+- [ngClass] support its
+
+Css Style binding support 2 ways 
+- A string containing zero or more CSS declarations eg. 'display: flex; padding: 8px'
+- An object where each property name is a CSS property name and each corresponding value is the value of that CSS property.
+
+ARIA binding - aria-label
+- Angular writes the string value to the element’s aria-label attribute and removes it when the bound value is null.

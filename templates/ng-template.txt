@@ -1,0 +1,32 @@
+ng-template or template fragment 
+ - a section of content to render dynamically or programtically
+ - create template fragment with ng-template
+ - it can contain bindings with dynamic expression
+
+ Getting Template Fragment has 3 ways : 
+ - template reference variable in ng-template
+ - referencing fragment with queries eg. viewChild<TemplateRef<unknown>>(TemplateRef)
+ - a directive can inject a TemplateRef if it is applied directly to an ng-template element 
+
+Rendering Template Fragment has 2 ways :
+ - NgTemplateOutlet directive in ng-container
+ - ViewContainerRef in Ts
+ 
+Using ViewContainerRef
+ - view container is a node in Angular's component tree
+ - inject ViewContainerRef to get current location in DOM
+ - dynamically render a template fragment by createEmbeddedView in ViewContainerRef as sibling
+
+Passing paramters in template fragment
+ - when render a fragment, we can optionally pass context object
+ - paramter is written prefix- "let-" with a value matching in the context object
+ - NgTemplateOutletContext in NgTemplateOutlet
+ - context paramter in ViewContainerRef
+
+Injector here - complex 
+
+Structural Directives
+ - Injects TemplateRef
+ - Injects ViewContainerRef and programtically renders the injected TemplateRef
+ - more in Directives tutorial
+

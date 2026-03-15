@@ -1,0 +1,18 @@
+@if
+@else if
+@else
+@for supports -> $count, $index, $first, $last, $even, $old
+@empty is Fallback of @for
+@switch
+@case
+@default
+
+
+- @if support saving the result of conditional expression in a variable for reuse inside of the block
+- track in @for allows Angular to maintain a relationship between your data and the DOM nodes on the page. Select a property that uniquely identifies each item in the track expression.
+- for static collections use $index as tracking
+- if no option is available use item itself as a tracking key
+- @switch use === for equality
+- @switch supports exhaustive type checking, allowing Angular to verify at compile time that all possible values of a union type are handled.
+- By using @default never; we need to handle all cases of switch. If not, compile time error
+

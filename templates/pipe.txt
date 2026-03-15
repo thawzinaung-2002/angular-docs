@@ -1,0 +1,19 @@
+Pipe -> |
+
+- to transform data declaratively in template
+- import pipe in import array and use in template
+- support multiple pipes combinig in one Expression
+- can pass parameters to pipe separated by ":" eg. pipe : 'format'
+- can pass multiple parameters to pipe 
+
+Creating a custom pipe
+- must include @Pipe Decorator
+- must implements PipeTransform interface
+- override transform method for customization
+- accept parameters by adding additional parameters in transform method 
+- use camelCase for name
+- use PascalCase for class name
+
+Pipes are pure. They only detect new object change and no detect internal change. To detect internal changes, pure flag to false in meta data.
+
+
