@@ -1,0 +1,10 @@
+Two types : Local Var and Template Ref Var
+
+ - local with @let eg. @let name = user.name
+ - @let cannot reassign after declaration
+ - @let scoped to the current view and its descendants
+ - @let are not hoisted.So, they can't be accessed by parent views or siblings
+ - # use to declare template refrence variables
+ - # can refer DOM element, Angular component or directive, and a TemplateRef
+ - a directive can be refrenced by # when a directive has exportAs name
+ - # can use to query a specific element in a template 

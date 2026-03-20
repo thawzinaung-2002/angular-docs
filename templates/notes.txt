@@ -22,6 +22,7 @@ Template
 5. Pipes
 6. Ng Content - in Componenents Folder
 7. ng template
-
-variables
-white-sapce
+8. ng container
+9. variables
+10. defer :: to go deep dive
+11. local varaibles

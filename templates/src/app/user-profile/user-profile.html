@@ -1,0 +1,11 @@
+<!-- <ng-container [ngComponentOutlet]="profileComponent()"></ng-container> -->
+
+@let name = username;
+
+<h2>Your Profile</h2>
+<ng-container [ngTemplateOutlet]="profileTemplate()">
+    <p>This is inside container {{name()}}</p>
+</ng-container>
+
+<ng-template #admin>This is the admin profile.</ng-template>
+<ng-template #basic>This is the basic profile.</ng-template>
