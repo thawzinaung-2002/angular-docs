@@ -1,0 +1,12 @@
+ng-container : Grouping elements
+
+ - marks a location in the template without rendering a real element
+ - rendering components dynamically with ngComponentOutlet
+ - rendering templates dynamically with ngTemplateOutlet
+ - apply structural directives eg, ngIf, ngFor
+ - elements inside ng-container can inject directives or anything that the directive provides.
+ eg. 
+ <ng-container theme="dark">
+  <profile-pic />
+  <user-bio />
+</ng-container>

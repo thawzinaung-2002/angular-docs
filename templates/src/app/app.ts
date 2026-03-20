@@ -1,19 +1,19 @@
-import { NgOptimizedImage } from '@angular/common';
-import { Component, inject, signal, ViewContainerRef } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StrConcatPipe } from './str-concat-pipe';
 import { BaseButton } from './base-button/base-button';
 import { TemplateFragment } from './template-fragment/template-fragment';
 import { FragmentRef } from './fragment-ref/fragment-ref';
+import { UserProfile } from './user-profile/user-profile';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, StrConcatPipe, BaseButton, TemplateFragment, FragmentRef],
+  imports: [RouterOutlet, StrConcatPipe, BaseButton, TemplateFragment, FragmentRef, UserProfile],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  theme = 'dark';
+  theme = ' ';
 
   cssClassArr = signal(['fColor', 'fSize', 'fFamily']);
 

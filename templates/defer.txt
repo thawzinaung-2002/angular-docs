@@ -1,0 +1,11 @@
+ - reduce the initial bundle size of the application
+ - to improve Core Web Vitals(CWV), Largest Contentful Paint(LCP), Time to First Byte(TTFB)
+ - components, directives, pipes, and any CSS styles component can be deferred
+ - to defer, two conditions
+ - must be standalone
+ - cannot be referenced outside of @defer blocks within the same file
+ - @defer : the section of content that is lazily loaded
+ - @placeholder : optional block which declares what content to show before @defer block
+ - @loading : optional block that allows you to declare content that is shown while deferred dependencies are loading
+ - @error : optional block that displays if deferred loading fails
+ 
