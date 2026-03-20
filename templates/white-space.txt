@@ -1,0 +1,3 @@
+ - to preserve whitespace in a template by specifying preserveWhitespaces: true in the @Component decorator for a template
+ - preserving whitespace can cause Angular to produce significantly more nodes while rendering, slowing down your application.
+ - use a special HTML entity unique to Angular, &ngsp;

@@ -22,3 +22,6 @@ Template
 5. Pipes
 6. Ng Content - in Componenents Folder
 7. ng template
+
+variables
+white-sapce
