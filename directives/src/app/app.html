@@ -1,0 +1,9 @@
+<p ngNonBindable>The sum of 1 + 1 = {{ 1 + 1 }}</p>
+
+<div>
+  <input type="radio" name="colors" (click)="color = 'lightgreen'" />Green
+  <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
+  <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
+</div>
+
+<p appHighlight [appHighlightColor]="color" defaultColor="violet">This is main</p>

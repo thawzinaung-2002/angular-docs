@@ -1,0 +1,18 @@
+Directives
+
+- Component Directives
+- Attribute Directives
+- Structural Directives
+
+ng g directive name
+
+Attribute Directives
+- appearance or behaviour of DOM elements
+- inject ElementRef to access host DOM
+- apply logic eg. el.nativeElement.style.color = "red";
+- use events with host in @Directive decorator
+- passing parameters also support
+- ngNonBindable disables Angular processing in {{}} but directive is still active
+
+
+Structural Directives
