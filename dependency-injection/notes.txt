@@ -1,0 +1,39 @@
+Service - @Injectable
+
+- @Injectable creates a singleton Service
+- providedIn : 'root' define injectable from everywhere without additional config
+- Service Available options - Automatic, Manual Provision
+
+Automatic Provision : @Injectable with providedIn or with InjectionToken config
+- @Injectable with providedIn : 'root' is suitable for service classes
+- InjectionToken is for config objects, functions, or primitive values globally
+
+
+Manual Provision : providers array
+- create separate instance 
+
+Declaring provider
+- key (provider identifier) : unique identifier to request a dependency
+- value : what angular return
+
+Provider identifier
+- Class Names
+- Injection Tokens
+** Types and Interfaces can't be identifier
+
+Value
+- useClass
+- useValue
+- useFactory
+- useExisting
+
+Where specify providers?
+- Application bootstrap
+- On an element
+- Route
+
+Provider functions
+- return provider for complex providers
+
+
+
