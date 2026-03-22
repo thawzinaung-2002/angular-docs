@@ -35,5 +35,9 @@ Where specify providers?
 Provider functions
 - return provider for complex providers
 
-
+Resolution Modifiers
+- optional      :   what to do if Angular doesn't find dependency
+- self          :   find in the current
+- skipSelf      :   start from the parent ElementInjector
+- host          :   last stop is the current
 

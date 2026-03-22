@@ -1,22 +1,20 @@
-import { Component, inject, Injectable } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CONFIG_TOKEN } from './injection-token/token-provider';
+import { Config, CONFIG_TOKEN } from './injection-token/token-provider';
 
-@Injectable()
-export class LocalDataStore {
-  private data: string[] = [];
-
-  addData(item: string) {
-    this.data.push(item);
-  }
-}
+const SelfConfig: Config = {
+  apiUrl: 'selfconfig.com',
+  timeout: 10,
+  features: {},
+};
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
+  // providers: [{ provide: CONFIG_TOKEN, useValue: SelfConfig }],
 })
 export class App {
-  config = inject(CONFIG_TOKEN);
+  config = inject(CONFIG_TOKEN, { host: true, optional: true });
 }
