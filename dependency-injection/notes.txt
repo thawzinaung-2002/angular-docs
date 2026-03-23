@@ -35,7 +35,7 @@ Where specify providers?
 Provider functions
 - return provider for complex providers
 
-Resolution Modifiers
+Resolution Modifiers : with @Self(),@Optional... or self:true in inject()
 - optional      :   what to do if Angular doesn't find dependency
 - self          :   find in the current
 - skipSelf      :   start from the parent ElementInjector
