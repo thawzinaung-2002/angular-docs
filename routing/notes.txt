@@ -1,0 +1,88 @@
+Normal Browser
+- make a request
+- displays the HTML page
+- every request is same action
+
+SPA
+- request only in first time, index.html
+- client-side router control content displays
+- without triggering a full-page reload
+
+Routing
+- routes
+- outlets
+- links
+
+Routes
+- define components to render for a specific URL path or pattern
+- static URL paths
+- URL paths with route parameters (:)
+- route must start with a letter and can contain Letters, Numbers, Underscore, Hypen 
+- ** wildcard routes to catch all routes
+- first-match wins strategy, order is important
+- redirectTo : redirecting to another route instead of component rendering
+- page title support when a route activates
+- advanced customization page title with TitleStrategy interface
+- route level DI in providers array
+- static data with data property
+- dynamic data with data resolvers
+- nested routes with children array 
+
+Route Loading Strategies
+- Eagerly   : component in route directly
+- Lazily    : loadComponent, loadChildren
+
+Router-outlets
+- show HTML content here
+- default name is primary
+- can take name customization
+- matches the outlet name in route 
+- activate, deactivate, attach, detach outlet lifecycle events
+- can add standard event binding listener
+- RouterOutlet supports routerOutletData as input
+- can inject with ROUTER_OUTLET_DATA token
+
+RouterLink
+- relative url  : navigation paths relative to current route's location
+- absolute url  : full path
+
+Routing has two syntaxes
+- strings eg, routerLink = "dashboard" 
+- arrays eg, [routerLink] = "['dashboard']"
+- for dynamic parameters eg, [routerLink] = "['dashboard', id]"
+- relative to current url without / or root domain with /
+- RouterLink is declarative navigation
+- Programmatic navigation by injection Router
+- support browserUrl input to customize browser's address bar
+- UrlTree for dynamic use cases
+- detect link active with routerLinkActive
+- add routerLinkActiveOptions directive for exact route matches
+
+Router
+navigate()
+- navigate method supports programmatic navigation
+- static, route parameters, query parameters, matrix parameters navigation with array segments
+- dynamic navigation paths relative to current location with relativeTo
+
+navigateByUrl()
+- URL path strings
+- replaceUrl option to replace current URL in history
+- browserUrl to displays different URL in the browser's address bar
+
+
+Reading Route : ActivatedRoute
+- url, data, params, queryParams
+- route snapshots are static and will not reflect future changes
+- two types of parameters in a route: route, query parameters
+- route parameters with : and can access with params
+- query parameters can persist across navigation events and can access with queryParams
+- matrix parameters with ; and can access with params
+- to check url is active with isActive() signal
+
+
+
+
+
+
+
+
