@@ -79,6 +79,9 @@ Reading Route : ActivatedRoute
 - matrix parameters with ; and can access with params
 - to check url is active with isActive() signal
 
+Redirecting Routes
+- define redirectTo in route configuration
+- pathMatch : full or prefix(default)
 
 Route access with Guards
 - ng g guard name
@@ -89,8 +92,13 @@ Route access with Guards
 
 
 Data resolvers
-
-
+- fetching data before navigation to a route
+- create a data resolver with ResolveFn and configure in resolve array of Route
+- access resolver data with signal + ActivatedRoute, or
+- withComponentInputBinding in provideRouter and access in component with signal
+- error handling : centralize error handling, subscription to router events, handle errors directly in resolver
+- navigation loading for UX 
+- can read parent's resolver data in child
 
 
 
