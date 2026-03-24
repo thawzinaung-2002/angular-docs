@@ -80,6 +80,17 @@ Reading Route : ActivatedRoute
 - to check url is active with isActive() signal
 
 
+Route access with Guards
+- ng g guard name
+- canActivate       : user can access this route like authentication
+- canActivateChild  : user can access child routes of a parent route
+- canDeactivate     : user can leave a route like unsaved forms
+- canMatch          : a route can be matched during matching like same route with different components
+
+
+Data resolvers
+
+
 
 
 
