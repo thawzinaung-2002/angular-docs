@@ -101,7 +101,21 @@ Data resolvers
 - can read parent's resolver data in child
 
 
+Lifecycle and Events
+- Angular router emits lifecycle hooks and events during navigation
+- NavigationStart, RoutesRecongnized, GuardsCheckStart, GuardsCheckEnd, ResolveStart, ResolveEnd, NavigationEnd, NavigationSkipped
+- NavigationCancel, NavigationError are error events
+- can access from Router.events
+
+LocationStrategy
+- PathLocationStrategy like html5 pushstyle (default)
+- HashLocationStrategy
+
+Custom Route Matcher
+- can create custom route matches implementing Angular's UrlMatcher
 
 
-
-
+Rendering Strategies
+- CSR
+- SSG/Prerendering
+- SSR 
