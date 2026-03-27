@@ -1,0 +1,60 @@
+<!-- Favorite Color: is <span>{{favoriteColorControl.value}}</span>
+<input type="text" [formControl]="favoriteColorControl">
+<button (click)="setDefault()">Default</button> -->
+
+<p>Form Status: {{profileForm.status}}</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+    <label for="first-name">First Name</label>
+    <input type="text" formControlName="firstName" id="first-name">
+
+    @if(firstName?.invalid && (firstName?.dirty || firstName?.touched)) {
+        <div class="alert alert-danger">
+            @if(firstName?.hasError('required')) {
+                <div>Name is required</div>
+            }
+
+            @if(firstName?.hasError('minlength')) {
+                <div>Name must be at least 4 characters long</div>
+            }
+
+            @if(firstName?.hasError('forbiddenName')) {
+                <div>Name cannot be Bob</div>
+            }
+        </div>
+    }
+
+    <label for="last-name">Last Name</label>
+    <input type="text" formControlName="lastName" id="last-name">
+
+    <!-- <div formGroupName="address">
+        <h2>Address</h2>
+
+        <label for="city">City</label>
+        <input type="text" formControlName="city" id="city">
+
+        <label for="tsp">Township</label>
+        <input type="text" formControlName="tsp" id="tsp">
+
+        <label for="street">Street</label>
+        <input type="text" formControlName="street" id="street">
+
+        <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+
+    </div> -->
+
+    <div formArrayName="aliases">
+        <h2>Aliases</h2>
+        <button type="button" (click)="addAlias()">+ Add another alias</button>
+        @for(alias of aliases.controls; track $index; let i=$index) {
+            <div>
+                <label for="alias-{{i}}">Alias:</label>
+                <input type="text" id="alias-{{i}}" [formControlName]="i" (blur)="blurEvent(i)"> <br/>
+            </div>
+        }
+    </div>
+
+    <button type="button" (click)="updateProfile()">Update Profile</button>
+
+</form>

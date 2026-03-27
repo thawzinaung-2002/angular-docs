@@ -1,0 +1,37 @@
+Two types of Forms -> Reactive, Template
+
+Reactive
+- ReactiveFormModule, FormControl
+- FormControl.value is a snapshot of current value
+- setValue() and patchValue() manually update the value
+- setValue() must match structure but patchValue() can't need
+- Form Group or Form Array to group form control 
+- FormBuilder service can create form control, group and array effenciently
+- FormArray for managing any number of unnamed controls
+- Event Types => ValueChangeEvent, StatusChangeEvent, PristineChangeEvent, TouchedChangeEvent,
+  FormResetEvent, FormSubmitEvent
+- markAsTouched, markAsUntouched, markAsDirty, markAsPristine, markAllAsDirty, markAllAsTouched, 
+- emitEvent control event emissions
+- onlySelf isolates the update to the current control, preventing parent notification
+- type narrowing form control types => isFormControl, isFormGroup, isFormRecord, isFormArray
+- Angular 14+ support typed form for better type safety
+- Untyped Forms are also support
+- reset() set control value to null
+- nonNullable option will cause the control to reset initial value instead of null
+- FormArray provides clear() to remove all controls in it 
+- to define all controls to nonNullable, Angular support nonNullableFormBuilder
+- FormRecord to use with dynamic keys but same type
+- 
+
+
+Template
+- FormsModule, ngModel use for two-way data binding
+- ng-valid, ng-invalid, ng-touched, ng-untouched, ng-dirty, ng-pristine 
+- ngForm, ngSubmit
+
+
+Validation
+- adding attributes in template driven form
+- adding validator functions directly in form control
+- validator functions can be sync or async
+- 

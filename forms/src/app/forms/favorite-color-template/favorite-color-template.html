@@ -1,0 +1,48 @@
+<!-- Favorite Color: 
+<input type="text" [(ngModel)]="favoriteColor"> -->
+
+{{ model | json }}
+<form (ngSubmit)="onSubmit()" #actorForm="ngForm">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+            #name="ngModel" minlength="4" appForbiddenName="blob"/>
+    </div>
+   
+
+    @if(name.invalid && (name.dirty || name.touched)) {
+        <div class="alert">
+            @if(name.hasError('required')) {
+                <div>Name is required</div>
+            }
+
+            @if(name.hasError('minlength')) {
+                <div>Name must be at least 4 characters long</div>
+            }
+
+            @if(name.hasError('forbiddenName')) {
+                <div>Name cannot be Bob.</div>
+            }
+
+        </div>
+    }
+
+    <div class="form-group">
+        <label for="studio">Studio</label>
+        <input type="text" class="form-control" id="studio" [(ngModel)]="model.studio" name="studio" />
+    </div>
+    <div class="form-group">
+        <label for="skill">Skill</label>
+        <select class="form-control" id="skill" required [(ngModel)]="model.skill" name="skill">
+            @for (skill of skills; track $index) {
+            <option [value]="skill">{{ skill }}</option>
+            }
+        </select>
+    </div>
+
+    <button type="button" class="btn btn-default" (click)="newActor(); actorForm.reset()">New Actor</button>
+
+    <button type="submit" class="btn btn-success" [disabled]="!actorForm.form.valid">
+        Submit
+    </button>
+</form>
