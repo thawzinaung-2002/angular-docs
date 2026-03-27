@@ -1,0 +1,38 @@
+HttpClient
+
+- return RxJs Observable 
+- HttpClient module
+- responseTypes => json, text, arraybuffer, blob
+- post request must inlcude request body
+- request options 
+    params => request parameters
+    encoder => HttpParameters encoder with HttpParameterCodec
+    headers => request headers
+
+- response events
+    - set observe option to 'events'
+    - Events are HttpEventType
+
+- request failures
+    - Network or server connection error : status 0
+    - Timeout option  : status 0
+    - backend error response
+
+- timeout option for request 
+- keepalive option for outlive the page that initiated
+- cache option to interact with browser's HTTP cache
+- priority option to indicate importance of a request
+- mode option to handle cross-origin requests
+- redirect option to handle redirect responses from the server
+- credentials option or withCredentials option for cookies, authorization headers
+- referrer option for referrer information is sent with the request
+- referrerPolicy affects both privacy and analytics
+- integrity is useful for loading scripts or other resources from CDNs
+
+
+Interceptors or middleware
+- two kinds of interceptors: functional and DI
+- function must receive the outgoing HttpRequest and next processing step
+- configure in provideHttpClient with withInterceptors 
+- multiple interceptors with arrays and works with each
+- 
